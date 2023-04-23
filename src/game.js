@@ -29,6 +29,7 @@ class Game {
         this.gameSpeed = 40;
         this.gameOver = false;
         this.score = 0;
+        this.lineCount = 0
     }
 
     start() {
@@ -100,7 +101,9 @@ class Game {
             this.grid.unshift(new Array(10).fill(0));
         });
         this.score += Math.floor(fullLineIndexes.length * multiplier);
+        this.lineCount += fullLineIndexes.length;
         scoreOut.innerText = this.score;
+        lineCount.innerText = this.lineCount;
     }
     draw() {
         this.removeRowsDrawGrid();

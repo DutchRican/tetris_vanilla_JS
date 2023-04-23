@@ -5,6 +5,7 @@ const preview = document.getElementById('preview');
 const preview_ctx = preview.getContext('2d');
 
 const scoreOut = document.getElementById('score');
+const lineCount = document.getElementById('line_count');
 preview.width = 100;
 preview.height = 100;
 
